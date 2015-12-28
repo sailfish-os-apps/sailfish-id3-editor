@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-id3-editor
+Exec=harbour-id3-editor
+Name=harbour-id3-editor
+
