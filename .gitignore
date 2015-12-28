@@ -1,0 +1,9 @@
+/RPMS
+*.o
+/translations/*.qm
+/harbour-id3-editor
+/Makefile
+/*.list
+/moc*.cpp
+/*.pro.*
+/icon.psd
