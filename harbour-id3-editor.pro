@@ -21,7 +21,8 @@ OTHER_FILES += qml/harbour-id3-editor.qml \
     rpm/harbour-id3-editor.spec \
     rpm/harbour-id3-editor.yaml \
     translations/*.ts \
-    harbour-id3-editor.desktop
+    harbour-id3-editor.desktop \
+    qml/js/*.js
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
@@ -30,5 +31,6 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-id3-editor-cs_CZ.ts
 
 DISTFILES += \
-    qml/pages/MainPage.qml
+    qml/pages/MainPage.qml \
+    qml/js/api_key.js
 
