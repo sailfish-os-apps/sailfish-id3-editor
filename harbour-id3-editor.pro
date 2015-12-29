@@ -32,5 +32,11 @@ TRANSLATIONS += translations/harbour-id3-editor-cs_CZ.ts
 
 DISTFILES += \
     qml/pages/MainPage.qml \
-    qml/js/api_key.js
+    qml/js/api_key.js \
+    qml/js/DB.js \
+    qml/js/functions.js
+
+HEADERS += \
+    exec.h \
+    eyed3.h
 

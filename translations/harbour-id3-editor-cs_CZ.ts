@@ -12,18 +12,13 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="13"/>
+        <location filename="../qml/pages/MainPage.qml" line="20"/>
         <source>Show Page 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="26"/>
+        <location filename="../qml/pages/MainPage.qml" line="33"/>
         <source>UI Template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="30"/>
-        <source>Hello Sailors</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
