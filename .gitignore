@@ -7,3 +7,4 @@
 /moc*.cpp
 /*.pro.*
 /icon.psd
+/qml/js/api_key.js                  
