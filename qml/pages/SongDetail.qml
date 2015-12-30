@@ -12,12 +12,24 @@ import "components"
 Dialog {
     property string path
     property var info
+    property string command
 
     id: page
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
         contentHeight: maincolumn.height
+
+        /*PullDownMenu {
+
+            MenuItem {
+                text: qsTr("Save");
+                onClicked: {
+                    Functions.saveSong(path);
+                }
+            }
+        }*/
+
         Column {
             id: maincolumn
             width: page.width
@@ -43,6 +55,7 @@ Dialog {
                     var songpath = PHP.pathinfo(path,'PATHINFO_DIRNAME');
                     baseinfo.text = qsTr("Song file name: ")+songname+"\nSong path: "+songpath;
                     info = Functions.getSongInfo(path);
+                    console.log(info.track, typeof info.track);
                     Functions.updateTextFields();
                 }
             }
@@ -126,6 +139,11 @@ Dialog {
                 placeholderText: qsTr("Year")
                 inputMethodHints: Qt.ImhDigitsOnly
             }
+        }
+    }
+    onDone: {
+        if (result == DialogResult.Accepted) {
+            command = Functions.saveSong(path);
         }
     }
 }

@@ -52,6 +52,9 @@ Page {
                     fontsize: Theme.fontSizeExtraSmall
                     onClicked: {
                         var dialog = pageStack.push("SongDetail.qml",{path: m_path});
+                        dialog.accepted.connect(function() {
+                            console.log(dialog.command);
+                        });
                     }
                 }
             }
