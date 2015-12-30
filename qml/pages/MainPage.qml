@@ -11,7 +11,7 @@ import "components"
 
 
 Page {
-    property string api_key: API_KEY.get_key();
+    //property string api_key: API_KEY.get_key();
     property bool first_run: false
     property var songs
 
@@ -53,7 +53,7 @@ Page {
                     onClicked: {
                         var dialog = pageStack.push("SongDetail.qml",{path: m_path});
                         dialog.accepted.connect(function() {
-                            console.log(dialog.command);
+                            eyed3.updateSong(dialog.command);
                         });
                     }
                 }

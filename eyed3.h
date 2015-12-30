@@ -46,6 +46,11 @@ public:
         system(command2.c_str());
         return QString::fromStdString(exec(command.c_str()));
     }
+
+    Q_INVOKABLE bool updateSong(const QString command) const {
+        system(command.toStdString().c_str());
+        return true;
+    }
 };
 
 #endif // EYED3

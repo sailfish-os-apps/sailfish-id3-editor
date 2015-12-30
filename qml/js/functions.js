@@ -41,7 +41,7 @@ function getSongInfo(path) {
         if(current.indexOf("album artist") > -1) {
             ret.album_artist = current.replace("album artist: ","");
         }
-        if(current.indexOf("release date") > -1) {
+        if(current.indexOf("release date") > -1 && current.indexOf("original") < 0) {
             ret.release_date = current.replace("release date: ","");
         }
         if(current.indexOf("track: ") > -1) {
