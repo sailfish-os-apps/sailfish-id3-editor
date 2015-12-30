@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="cs_CZ">
 <context>
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="8"/>
         <source>My Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Můj obal</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="31"/>
         <source>Choose song</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvolte písničku</translation>
     </message>
 </context>
 <context>
@@ -22,86 +22,86 @@
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="39"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="40"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrušit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="45"/>
         <source>Edit song tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravit tagy písně</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="56"/>
         <source>Song file name: </source>
-        <translation type="unfinished"></translation>
+        <translation>Název souboru:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="71"/>
         <location filename="../qml/pages/SongDetail.qml" line="72"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Umělec</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="78"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Název</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="79"/>
         <source>Song title</source>
-        <translation type="unfinished"></translation>
+        <translation>Název písně</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="85"/>
         <location filename="../qml/pages/SongDetail.qml" line="86"/>
         <source>Album</source>
-        <translation type="unfinished"></translation>
+        <translation>Album</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="92"/>
         <location filename="../qml/pages/SongDetail.qml" line="93"/>
         <source>Album artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Umělec alba</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="99"/>
         <location filename="../qml/pages/SongDetail.qml" line="100"/>
         <source>Track number</source>
-        <translation type="unfinished"></translation>
+        <translation>Číslo skladby</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="107"/>
         <location filename="../qml/pages/SongDetail.qml" line="108"/>
         <source>Total tracks on album</source>
-        <translation type="unfinished"></translation>
+        <translation>Celkový počet písní na albu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="115"/>
         <location filename="../qml/pages/SongDetail.qml" line="116"/>
         <source>Disc number</source>
-        <translation type="unfinished"></translation>
+        <translation>Číslo disku</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="123"/>
         <location filename="../qml/pages/SongDetail.qml" line="124"/>
         <source>Total discs count</source>
-        <translation type="unfinished"></translation>
+        <translation>Celkový počet disků</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="131"/>
         <location filename="../qml/pages/SongDetail.qml" line="132"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Žánr</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="138"/>
         <location filename="../qml/pages/SongDetail.qml" line="139"/>
         <source>Year</source>
-        <translation type="unfinished"></translation>
+        <translation>Rok</translation>
     </message>
 </context>
 </TS>

@@ -4,6 +4,7 @@
 <context>
     <name>CoverPage</name>
     <message>
+        <location filename="../qml/cover/CoverPage.qml" line="8"/>
         <source>My Cover</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11,6 +12,7 @@
 <context>
     <name>MainPage</name>
     <message>
+        <location filename="../qml/pages/MainPage.qml" line="31"/>
         <source>Choose song</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18,62 +20,86 @@
 <context>
     <name>SongDetail</name>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="39"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="40"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="45"/>
         <source>Edit song tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="56"/>
         <source>Song file name: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Song title</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../qml/pages/SongDetail.qml" line="71"/>
+        <location filename="../qml/pages/SongDetail.qml" line="72"/>
         <source>Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="78"/>
         <source>Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="79"/>
+        <source>Song title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SongDetail.qml" line="85"/>
+        <location filename="../qml/pages/SongDetail.qml" line="86"/>
         <source>Album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="92"/>
+        <location filename="../qml/pages/SongDetail.qml" line="93"/>
         <source>Album artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="99"/>
+        <location filename="../qml/pages/SongDetail.qml" line="100"/>
         <source>Track number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="107"/>
+        <location filename="../qml/pages/SongDetail.qml" line="108"/>
         <source>Total tracks on album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="115"/>
+        <location filename="../qml/pages/SongDetail.qml" line="116"/>
         <source>Disc number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="123"/>
+        <location filename="../qml/pages/SongDetail.qml" line="124"/>
         <source>Total discs count</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="131"/>
+        <location filename="../qml/pages/SongDetail.qml" line="132"/>
         <source>Genre</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongDetail.qml" line="138"/>
+        <location filename="../qml/pages/SongDetail.qml" line="139"/>
         <source>Year</source>
         <translation type="unfinished"></translation>
     </message>
