@@ -13,14 +13,17 @@
 #include <QGuiApplication>
 #include <QFileSystemWatcher>
 #include "eyed3.h"
+#include "misc.h"
 
 int main(int argc, char *argv[]) {
     qDebug() << setuid(0);
     EyeD3 eyed3;
+    Misc misc;
     QGuiApplication *app = SailfishApp::application(argc,argv);
     QQuickView *view = SailfishApp::createView();
     QString qml = QString("qml/harbour-id3-editor.qml");
     view->rootContext()->setContextProperty("eyed3",&eyed3);
+    view->rootContext()->setContextProperty("fce",&misc);
     view->setSource(SailfishApp::pathTo(qml));
     view->show();
     return app->exec();

@@ -38,6 +38,14 @@ public:
         system("rm -rf /usr/share/harbour-id3-editor/eyeD3-0.7.9");
         return true;
     }
+
+    Q_INVOKABLE QString songInfo(const QString path) const {
+        std::string c_path = path.toStdString();
+        std::string command = "eyeD3 --no-color \""+c_path+"\"";
+        std::string command2 = "eyeD3 --no-color \""+c_path+"\" > /home/nemo/debug.txt";
+        system(command2.c_str());
+        return QString::fromStdString(exec(command.c_str()));
+    }
 };
 
 #endif // EYED3

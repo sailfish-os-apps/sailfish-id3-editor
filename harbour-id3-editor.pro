@@ -34,9 +34,14 @@ DISTFILES += \
     qml/pages/MainPage.qml \
     qml/js/api_key.js \
     qml/js/DB.js \
-    qml/js/functions.js
+    qml/js/functions.js \
+    qml/js/eyeD3.js \
+    qml/js/php.js \
+    qml/pages/components/Button.qml \
+    qml/pages/SongDetail.qml
 
 HEADERS += \
     exec.h \
-    eyed3.h
+    eyed3.h \
+    misc.h
 
