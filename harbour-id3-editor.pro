@@ -38,7 +38,8 @@ DISTFILES += \
     qml/js/eyeD3.js \
     qml/js/php.js \
     qml/pages/components/Button.qml \
-    qml/pages/SongDetail.qml
+    qml/pages/SongDetail.qml \
+    qml/pages/BanPath.qml
 
 HEADERS += \
     exec.h \

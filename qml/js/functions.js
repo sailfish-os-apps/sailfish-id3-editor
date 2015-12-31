@@ -13,7 +13,6 @@ function getSongs() {
     var songs = fce.songs();
     songs = songs.split("\n");
     songs.pop();
-    console.log(songs);
     return songs;
 }
 

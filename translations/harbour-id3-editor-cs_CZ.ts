@@ -2,6 +2,35 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="cs_CZ">
 <context>
+    <name>BanPath</name>
+    <message>
+        <location filename="../qml/pages/BanPath.qml" line="23"/>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BanPath.qml" line="24"/>
+        <source>Save</source>
+        <translation>Uložit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BanPath.qml" line="28"/>
+        <source>Write path</source>
+        <translation>Napište cestu</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BanPath.qml" line="32"/>
+        <source>If you add an path here, it will be ignored and won&apos;t search any mp3 files there.</source>
+        <translation>Pokud zde vyplníte cestu, bude ignorována a žádné mp3 z této složky nebudou vyhledány.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BanPath.qml" line="38"/>
+        <location filename="../qml/pages/BanPath.qml" line="39"/>
+        <source>Path</source>
+        <translation>Cesta</translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="8"/>
@@ -12,7 +41,17 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="31"/>
+        <location filename="../qml/pages/MainPage.qml" line="29"/>
+        <source>Delete databases</source>
+        <translation>Smazat databáze</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="39"/>
+        <source>Ban path</source>
+        <translation>Zakázat cestu</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="57"/>
         <source>Choose song</source>
         <translation>Zvolte písničku</translation>
     </message>

@@ -14,6 +14,7 @@ Page {
     //property string api_key: API_KEY.get_key();
     property bool first_run: false
     property var songs
+    property var banned_paths: false
 
     id: page
 
@@ -21,6 +22,31 @@ Page {
         anchors.fill: parent
 
         contentHeight: column.height
+
+        PullDownMenu {
+
+            MenuItem {
+                text: qsTr("Delete databases")
+                onClicked: {
+                    DB.open().transaction(function(tx) {
+                        tx.executeSql("DROP TABLE IF EXISTS firstrun");
+                        tx.executeSql("DROP TABLE IF EXISTS banned");
+                    });
+                }
+            }
+
+            MenuItem {
+                text: qsTr("Ban path")
+                onClicked: {
+                    var dialog = pageStack.push("BanPath.qml");
+                    dialog.accepted.connect(function() {
+                        DB.open().transaction(function(tx) {
+                            tx.executeSql("INSERT INTO banned (path) VALUES (?)",dialog.path);
+                        });
+                    });
+                }
+            }
+        }
 
         Column {
             id: column
@@ -43,6 +69,7 @@ Page {
             }
 
             Repeater {
+                visible: false
                 id: listview
                 model: lmodel
                 Button {
@@ -59,20 +86,42 @@ Page {
                 }
             }
 
-            Component.onCompleted: {
-                songs = Functions.getSongs();
-                for(var i in songs) {
-                    var m_text = PHP.pathinfo(songs[i],'PATHINFO_BASENAME');
-                    var m_path = songs[i];
-                    lmodel.append({m_text: m_text, m_path: m_path});
+            Timer {
+                id: starttimer
+                running: true
+                interval: 500
+                onTriggered: {
+                    if(banned_paths) {
+                        starttimer.running = false;
+                        songs = Functions.getSongs();
+                        console.log(songs)
+                        for(var j in banned_paths) {
+                            var banned = banned_paths[j];
+                            for(var i = songs.length - 1; i >= 0; i--) {
+                                var song = songs[i];
+                                if(song.indexOf(banned) > -1) {
+                                    songs.splice(i,1);
+                                }
+                            }
+                        }
+                        console.log(songs);
+                        for(var i in songs) {
+                            var m_text = PHP.pathinfo(songs[i],'PATHINFO_BASENAME');
+                            var m_path = songs[i];
+                            lmodel.append({m_text: m_text, m_path: m_path});
+                        }
+                    }
                 }
+            }
 
+            Component.onCompleted: {
                 DB.open().transaction(function(tx) {
 
                     //tx.executeSql("DROP TABLE IF EXISTS firstrun");
-
+                    //tx.executeSql("DROP TABLE IF EXISTS banned");
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)")
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS banned (path TEXT)");
                     var res = tx.executeSql("SELECT * FROM firstrun");
                     if(!res.rows.length) { // it's first time running this app
                         console.log("firstrun");
@@ -81,6 +130,17 @@ Page {
                     } else {
                         console.log("notfirstrun");
                         first_run = false;
+                    }
+
+                    res = tx.executeSql("SELECT * FROM banned");
+                    if(!res.rows.length) {
+                        banned_paths = true;
+                    } else {
+                        banned_paths = [];
+                        for(var i = 0; i < res.rows.length; i++) {
+                            banned_paths[i] = res.rows.item(i).path;
+                        }
+                        console.log(banned_paths);
                     }
 
                     if(first_run) {
