@@ -15,6 +15,8 @@ Page {
     property bool first_run: false
     property var songs
     property var banned_paths: false
+    property string filter
+    property bool debug: false
 
     id: page
 
@@ -26,7 +28,19 @@ Page {
         PullDownMenu {
 
             MenuItem {
+                text: qsTr("Turn off debug")
+                visible: debug
+                onClicked: {
+                    DB.open().transaction(function(tx) {
+                        tx.executeSql("UPDATE debug SET debug=0");
+                        debug = false;
+                    });
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Delete databases")
+                visible: debug
                 onClicked: {
                     DB.open().transaction(function(tx) {
                         tx.executeSql("DROP TABLE IF EXISTS firstrun");
@@ -44,6 +58,19 @@ Page {
                             tx.executeSql("INSERT INTO banned (path) VALUES (?)",dialog.path);
                         });
                     });
+                }
+            }
+
+            MenuItem {
+                text: search.visible?qsTr("Hide search field"):qsTr("Show search field")
+                onClicked: {
+                    search.visible = !search.visible;
+                    if(!search.visible) {
+                        search.text = "";
+                        search.focus = false;
+                    } else {
+                        search.focus = true;
+                    }
                 }
             }
         }
@@ -66,6 +93,18 @@ Page {
 
             ListModel {
                 id: lmodel
+            }
+
+            TextField {
+                width: parent.width - Theme.paddingLarge * 2
+                x: Theme.paddingLarge
+                id: search
+                visible: false
+                placeholderText: qsTr("Search...")
+                label: qsTr("Search...")
+                onTextChanged: {
+                    Functions.reloadSongList(search.text);
+                }
             }
 
             Repeater {
@@ -93,9 +132,9 @@ Page {
                 onTriggered: {
                     if(banned_paths) {
                         starttimer.running = false;
-                        songs = Functions.getSongs();
-                        console.log(songs)
-                        for(var j in banned_paths) {
+                        Functions.reloadSongList();
+                        /*songs = Functions.getSongs("Rammstein");
+                        /*for(var j in banned_paths) {
                             var banned = banned_paths[j];
                             for(var i = songs.length - 1; i >= 0; i--) {
                                 var song = songs[i];
@@ -104,12 +143,11 @@ Page {
                                 }
                             }
                         }
-                        console.log(songs);
                         for(var i in songs) {
                             var m_text = PHP.pathinfo(songs[i],'PATHINFO_BASENAME');
                             var m_path = songs[i];
                             lmodel.append({m_text: m_text, m_path: m_path});
-                        }
+                        }*/
                     }
                 }
             }
@@ -122,6 +160,7 @@ Page {
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS firstrun (firstrun INT)")
                     tx.executeSql("CREATE TABLE IF NOT EXISTS banned (path TEXT)");
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS debug (debug INT)");
                     var res = tx.executeSql("SELECT * FROM firstrun");
                     if(!res.rows.length) { // it's first time running this app
                         console.log("firstrun");
@@ -142,6 +181,14 @@ Page {
                         }
                         console.log(banned_paths);
                     }
+
+                    res = tx.executeSql("SELECT * FROM debug");
+                    if(res.rows.length) {
+                        debug = res.rows.item(0).debug == 1?true:false;
+                    } else {
+                        tx.executeSql("INSERT INTO debug (debug) VALUES (0)");
+                    }
+                    console.log(debug);
 
                     if(first_run) {
                         if(!Functions.installEyeD3()) {

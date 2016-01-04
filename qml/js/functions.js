@@ -9,11 +9,43 @@ function installEyeD3() {
     return true;
 }
 
-function getSongs() {
+function reloadSongList(filter) {
+    lmodel.clear();
+    songs = getSongs(filter);
+    for(var j in banned_paths) {
+        var banned = banned_paths[j];
+        for(var i = songs.length - 1; i >= 0; i--) {
+            var song = songs[i];
+            if(song.indexOf(banned) > -1) {
+                songs.splice(i,1);
+            }
+        }
+    }
+    for(var i in songs) {
+        var m_text = PHP.pathinfo(songs[i],'PATHINFO_BASENAME');
+        var m_path = songs[i];
+        lmodel.append({m_text: m_text, m_path: m_path});
+    }
+}
+
+function getSongs(filter) {
     var songs = fce.songs();
     songs = songs.split("\n");
     songs.pop();
-    return songs;
+    if(!filter) {
+        return songs;
+    }
+    var r_songs = [];
+    for(var i in songs) {
+        var song = PHP.basename(songs[i]);
+        console.log(song);
+        var reg = new RegExp(filter,"i");
+        if(reg.test(song)) {
+            r_songs.push(songs[i]);
+        }
+    }
+    console.log(r_songs);
+    return r_songs;
 }
 
 function getSongInfo(path) {

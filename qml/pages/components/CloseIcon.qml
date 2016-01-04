@@ -6,14 +6,12 @@ MouseArea {
     id: button
 
     property bool down: pressed && containsMouse && !DragFilter.canceled
-    property alias text: buttonText.text
     property bool _showPress: down || pressTimer.running
     property color color: Theme.primaryColor
     property color highlightColor: Theme.highlightColor
     property color highlightBackgroundColor: Theme.highlightBackgroundColor
     property real preferredWidth: Theme.buttonWidthSmall
-    property var fontsize: Theme.fontSizeMedium
-    property alias radius: rect.radius
+    property var button_size: Theme.itemSizeExtraSmall
 
     onPressedChanged: {
         if (pressed) {
@@ -27,27 +25,24 @@ MouseArea {
     onPressed: button.DragFilter.begin(mouse.x, mouse.y)
     onPreventStealingChanged: if (preventStealing) button.DragFilter.end()
 
-    height: Theme.itemSizeExtraSmall
-    implicitWidth: Math.max(preferredWidth, buttonText.width+Theme.paddingMedium)
+    height: button_size
+    width: button_size
+    implicitWidth: button_size
 
     Rectangle {
-        id: rect
-        anchors {
-            fill: parent
-            topMargin: (button.height-Theme.itemSizeExtraSmall)/2
-            bottomMargin: anchors.topMargin
-        }
-        radius: Theme.paddingSmall
+        height: button_size
+        width: button_size
+        radius: button_size/2
         color: _showPress ? Theme.rgba(button.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
                           : Theme.rgba(button.color, 0.2)
 
         opacity: button.enabled ? 1.0 : 0.4
 
-        Label {
-            id: buttonText
+        Image {
+            source: "image://theme/icon-close-vkb"
             anchors.centerIn: parent
-            color: _showPress ? button.highlightColor : button.color
-            font.pixelSize: fontsize
+            width: 32
+            height: 32
         }
     }
 

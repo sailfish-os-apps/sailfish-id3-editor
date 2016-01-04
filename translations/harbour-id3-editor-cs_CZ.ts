@@ -4,56 +4,69 @@
 <context>
     <name>BanPath</name>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="23"/>
+        <location filename="../qml/pages/BanPath.qml" line="24"/>
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="24"/>
+        <location filename="../qml/pages/BanPath.qml" line="25"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="28"/>
+        <location filename="../qml/pages/BanPath.qml" line="29"/>
         <source>Write path</source>
         <translation>Napište cestu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="32"/>
+        <location filename="../qml/pages/BanPath.qml" line="33"/>
         <source>If you add an path here, it will be ignored and won&apos;t search any mp3 files there.</source>
         <translation>Pokud zde vyplníte cestu, bude ignorována a žádné mp3 z této složky nebudou vyhledány.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="38"/>
-        <location filename="../qml/pages/BanPath.qml" line="39"/>
+        <location filename="../qml/pages/BanPath.qml" line="51"/>
+        <location filename="../qml/pages/BanPath.qml" line="52"/>
         <source>Path</source>
         <translation>Cesta</translation>
     </message>
 </context>
 <context>
-    <name>CoverPage</name>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="8"/>
-        <source>My Cover</source>
-        <translation>Můj obal</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="29"/>
+        <location filename="../qml/pages/MainPage.qml" line="31"/>
+        <source>Turn off debug</source>
+        <translation>Vypnout debug</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="42"/>
         <source>Delete databases</source>
         <translation>Smazat databáze</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="39"/>
+        <location filename="../qml/pages/MainPage.qml" line="53"/>
         <source>Ban path</source>
         <translation>Zakázat cestu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="57"/>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <source>Hide search field</source>
+        <translation>Skrýt vyhledávání</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <source>Show search field</source>
+        <translation>Zobrazit vyhledávání</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="84"/>
         <source>Choose song</source>
         <translation>Zvolte písničku</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="103"/>
+        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <source>Search...</source>
+        <translation>Hledat...</translation>
     </message>
 </context>
 <context>
@@ -75,8 +88,10 @@
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="56"/>
-        <source>Song file name: </source>
-        <translation>Název souboru:</translation>
+        <source>Song file name: %1
+Song path: %2</source>
+        <translation>Název souboru: %1
+Složka souboru: %2</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="71"/>

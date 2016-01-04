@@ -4,55 +4,68 @@
 <context>
     <name>BanPath</name>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="23"/>
+        <location filename="../qml/pages/BanPath.qml" line="24"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="24"/>
+        <location filename="../qml/pages/BanPath.qml" line="25"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="28"/>
+        <location filename="../qml/pages/BanPath.qml" line="29"/>
         <source>Write path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="32"/>
+        <location filename="../qml/pages/BanPath.qml" line="33"/>
         <source>If you add an path here, it will be ignored and won&apos;t search any mp3 files there.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BanPath.qml" line="38"/>
-        <location filename="../qml/pages/BanPath.qml" line="39"/>
+        <location filename="../qml/pages/BanPath.qml" line="51"/>
+        <location filename="../qml/pages/BanPath.qml" line="52"/>
         <source>Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>CoverPage</name>
-    <message>
-        <location filename="../qml/cover/CoverPage.qml" line="8"/>
-        <source>My Cover</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="29"/>
+        <location filename="../qml/pages/MainPage.qml" line="31"/>
+        <source>Turn off debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="42"/>
         <source>Delete databases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="39"/>
+        <location filename="../qml/pages/MainPage.qml" line="53"/>
         <source>Ban path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="57"/>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <source>Hide search field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <source>Show search field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="84"/>
         <source>Choose song</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="103"/>
+        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <source>Search...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -75,7 +88,8 @@
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="56"/>
-        <source>Song file name: </source>
+        <source>Song file name: %1
+Song path: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

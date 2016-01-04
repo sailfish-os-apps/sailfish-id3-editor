@@ -53,7 +53,7 @@ Dialog {
                 Component.onCompleted: {
                     var songname = PHP.pathinfo(path,'PATHINFO_FILENAME');
                     var songpath = PHP.pathinfo(path,'PATHINFO_DIRNAME');
-                    baseinfo.text = qsTr("Song file name: ")+songname+"\nSong path: "+songpath;
+                    baseinfo.text = qsTr("Song file name: %1\nSong path: %2").arg(songname).arg(songpath);
                     info = Functions.getSongInfo(path);
                     console.log(info.track, typeof info.track);
                     Functions.updateTextFields();
