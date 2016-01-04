@@ -20,7 +20,7 @@
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="33"/>
-        <source>If you add an path here, it will be ignored and won&apos;t search any mp3 files there.</source>
+        <source>If you add a path here, it will be ignored and won&apos;t search any mp3 files there.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

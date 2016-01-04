@@ -30,7 +30,7 @@ Dialog {
             }
             Label {
                 width: page.width - Theme.paddingLarge * 2
-                text: qsTr("If you add an path here, it will be ignored and won't search any mp3 files there.")
+                text: qsTr("If you add a path here, it will be ignored and won't search any mp3 files there.")
                 wrapMode: Text.Wrap
                 x: Theme.paddingLarge
                 MouseArea {
