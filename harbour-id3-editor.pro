@@ -1,7 +1,8 @@
 TARGET = harbour-id3-editor
 
 MY_FILES = \
-other/eyeD3.tar.gz
+other/eyeD3.tar.gz \
+other/bin
 
 OTHER_SOURCES += $$MY_FILES
 
