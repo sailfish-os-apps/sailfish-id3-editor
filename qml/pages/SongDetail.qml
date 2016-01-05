@@ -13,6 +13,7 @@ Dialog {
     property string path
     property var info
     property string command
+    property string type // mp3 or ogg
 
     id: page
     SilicaFlickable {
@@ -54,8 +55,8 @@ Dialog {
                     var songname = PHP.pathinfo(path,'PATHINFO_FILENAME');
                     var songpath = PHP.pathinfo(path,'PATHINFO_DIRNAME');
                     baseinfo.text = qsTr("Song file name: %1\nSong path: %2").arg(songname).arg(songpath);
+                    type = Functions.getType();
                     info = Functions.getSongInfo(path);
-                    console.log(info.track, typeof info.track);
                     Functions.updateTextFields();
                 }
             }
@@ -89,6 +90,7 @@ Dialog {
             TextField {
                 id: songalbumartist
                 width: parent.width
+                visible: type == "mp3"
                 label: qsTr("Album artist")
                 placeholderText: qsTr("Album artist")
             }
@@ -104,6 +106,7 @@ Dialog {
             TextField {
                 id: songtrackcount
                 width: parent.width
+                visible: type == "mp3"
                 label: qsTr("Total tracks on album")
                 placeholderText: qsTr("Total tracks on album")
                 inputMethodHints: Qt.ImhDigitsOnly
@@ -112,6 +115,7 @@ Dialog {
             TextField {
                 id: songdiscnumber
                 width: parent.width
+                visible: type == "mp3"
                 label: qsTr("Disc number")
                 placeholderText: qsTr("Disc number")
                 inputMethodHints: Qt.ImhDigitsOnly
@@ -120,6 +124,7 @@ Dialog {
             TextField {
                 id: songdisccount
                 width: parent.width
+                visible: type == "mp3"
                 label: qsTr("Total discs count")
                 placeholderText: qsTr("Total discs count")
                 inputMethodHints: Qt.ImhDigitsOnly

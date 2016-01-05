@@ -16,6 +16,8 @@ public:
         QString list;
         list += QString::fromStdString(exec("find /home/nemo -name '*.mp3'"));
         list += QString::fromStdString(exec("find /media/sdcard -name '*.mp3'"));
+        list += QString::fromStdString(exec("find /home/nemo -name '*.ogg'"));
+        list += QString::fromStdString(exec("find /media/sdcard -name '*.ogg'"));
         return list;
     }
 };

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="sv">
 <context>
     <name>BanPath</name>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="24"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="25"/>
         <source>Save</source>
-        <translation>Uložit</translation>
+        <translation>Spara</translation>
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="29"/>
         <source>Write path</source>
-        <translation>Napište cestu</translation>
+        <translation>Ange sökväg</translation>
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="33"/>
         <source>If you add a path here, it will be ignored and won&apos;t search any mp3 files there.</source>
-        <translation>Pokud zde vyplníte cestu, bude ignorována a žádné mp3 z této složky nebudou vyhledány.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="51"/>
         <location filename="../qml/pages/BanPath.qml" line="52"/>
         <source>Path</source>
-        <translation>Cesta</translation>
+        <translation>Sökväg</translation>
     </message>
 </context>
 <context>
@@ -35,38 +35,38 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="31"/>
         <source>Turn off debug</source>
-        <translation>Vypnout debug</translation>
+        <translation>Stäng av felsökning</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="42"/>
         <source>Delete databases</source>
-        <translation>Smazat databáze</translation>
+        <translation>Ta bort databaser</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="53"/>
         <source>Ban path</source>
-        <translation>Zakázat cestu</translation>
+        <translation>Undanta sökväg</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="65"/>
         <source>Hide search field</source>
-        <translation>Skrýt vyhledávání</translation>
+        <translation>Dölj sökfältet</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="65"/>
         <source>Show search field</source>
-        <translation>Zobrazit vyhledávání</translation>
+        <translation>Visa sökfältet</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="84"/>
         <source>Choose song</source>
-        <translation>Zvolte písničku</translation>
+        <translation>Välj låt</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="103"/>
         <location filename="../qml/pages/MainPage.qml" line="104"/>
         <source>Search...</source>
-        <translation>Hledat...</translation>
+        <translation>Sök...</translation>
     </message>
 </context>
 <context>
@@ -74,40 +74,40 @@
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="40"/>
         <source>Save</source>
-        <translation>Uložit</translation>
+        <translation>Spara</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="41"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation>Avbryt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="46"/>
         <source>Edit song tags</source>
-        <translation>Upravit tagy písně</translation>
+        <translation>Redigera låttaggar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="57"/>
         <source>Song file name: %1
 Song path: %2</source>
-        <translation>Název souboru: %1
-Složka souboru: %2</translation>
+        <translation>Filnamn: %1
+Sökväg: %2</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="72"/>
         <location filename="../qml/pages/SongDetail.qml" line="73"/>
         <source>Artist</source>
-        <translation>Umělec</translation>
+        <translation>Artist</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="79"/>
         <source>Title</source>
-        <translation>Název</translation>
+        <translation>Titel</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="80"/>
         <source>Song title</source>
-        <translation>Název písně</translation>
+        <translation>Låttitel</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="86"/>
@@ -119,43 +119,43 @@ Složka souboru: %2</translation>
         <location filename="../qml/pages/SongDetail.qml" line="94"/>
         <location filename="../qml/pages/SongDetail.qml" line="95"/>
         <source>Album artist</source>
-        <translation>Umělec alba</translation>
+        <translation>Albumartist</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="101"/>
         <location filename="../qml/pages/SongDetail.qml" line="102"/>
         <source>Track number</source>
-        <translation>Číslo skladby</translation>
+        <translation>Spårnummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="110"/>
         <location filename="../qml/pages/SongDetail.qml" line="111"/>
         <source>Total tracks on album</source>
-        <translation>Celkový počet písní na albu</translation>
+        <translation>Antal spår i albumet</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="119"/>
         <location filename="../qml/pages/SongDetail.qml" line="120"/>
         <source>Disc number</source>
-        <translation>Číslo disku</translation>
+        <translation>Skivnummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="128"/>
         <location filename="../qml/pages/SongDetail.qml" line="129"/>
         <source>Total discs count</source>
-        <translation>Celkový počet disků</translation>
+        <translation>Totalt antal skivor</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="136"/>
         <location filename="../qml/pages/SongDetail.qml" line="137"/>
         <source>Genre</source>
-        <translation>Žánr</translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongDetail.qml" line="143"/>
         <location filename="../qml/pages/SongDetail.qml" line="144"/>
         <source>Year</source>
-        <translation>Rok</translation>
+        <translation>År</translation>
     </message>
 </context>
 </TS>
