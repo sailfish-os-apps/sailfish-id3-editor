@@ -33,38 +33,43 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="31"/>
+        <location filename="../qml/pages/MainPage.qml" line="32"/>
         <source>Turn off debug</source>
         <translation>Stäng av felsökning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="42"/>
+        <location filename="../qml/pages/MainPage.qml" line="43"/>
         <source>Delete databases</source>
         <translation>Ta bort databaser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="53"/>
+        <location filename="../qml/pages/MainPage.qml" line="54"/>
         <source>Ban path</source>
         <translation>Undanta sökväg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <location filename="../qml/pages/MainPage.qml" line="66"/>
         <source>Hide search field</source>
         <translation>Dölj sökfältet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <location filename="../qml/pages/MainPage.qml" line="66"/>
         <source>Show search field</source>
         <translation>Visa sökfältet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="84"/>
+        <location filename="../qml/pages/MainPage.qml" line="85"/>
         <source>Choose song</source>
         <translation>Välj låt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="103"/>
-        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <location filename="../qml/pages/MainPage.qml" line="130"/>
+        <source>Loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="117"/>
+        <location filename="../qml/pages/MainPage.qml" line="118"/>
         <source>Search...</source>
         <translation>Sök...</translation>
     </message>

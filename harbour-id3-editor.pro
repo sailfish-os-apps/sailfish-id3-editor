@@ -32,6 +32,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-id3-editor-cs_CZ.ts
 TRANSLATIONS += translations/harbour-id3-editor-sv.ts
 TRANSLATIONS += translations/harbour-id3-editor-es.ts
+TRANSLATIONS += translations/harbour-id3-editor-de.ts
 
 DISTFILES += \
     qml/pages/MainPage.qml \
@@ -42,7 +43,8 @@ DISTFILES += \
     qml/js/php.js \
     qml/pages/components/Button.qml \
     qml/pages/SongDetail.qml \
-    qml/pages/BanPath.qml
+    qml/pages/BanPath.qml \
+    qml/js/workerscript.js
 
 HEADERS += \
     exec.h \

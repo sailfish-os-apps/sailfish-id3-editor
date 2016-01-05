@@ -17,6 +17,7 @@ Page {
     property var banned_paths: false
     property string filter
     property bool debug: false
+    property var parsed_songs
 
     id: page
 
@@ -83,12 +84,25 @@ Page {
             PageHeader {
                 title: qsTr("Choose song")
             }
-            Label {
-                visible: false
-                x: Theme.paddingLarge
-                text: eyed3.whoami()
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge
+            WorkerScript {
+                id: myWorker
+                source: "../js/workerscript.js"
+                onMessage: {
+                    if(typeof messageObject.res != "undefined") { // first time loading
+                        var parsed_songs = messageObject.res;
+                        Functions.reloadSongList();
+                        loading.visible = false;
+                    }
+                    if(typeof messageObject.filtered != "undefined") {
+                        var songs = messageObject.filtered;
+                        for(var i in songs) {
+                            var m_text = PHP.pathinfo(songs[i],'PATHINFO_BASENAME');
+                            var m_path = songs[i];
+                            lmodel.append({m_text: m_text, m_path: m_path});
+                        }
+                        loading.visible = false;
+                    }
+                }
             }
 
             ListModel {
@@ -103,9 +117,23 @@ Page {
                 placeholderText: qsTr("Search...")
                 label: qsTr("Search...")
                 onTextChanged: {
-                    Functions.reloadSongList(search.text);
+                    //Functions.reloadSongList(search.text);
+                    lmodel.clear();
+                    loading.visible = true;
+                    myWorker.sendMessage({parsed_songs: parsed_songs, filter: search.text, banned_paths: banned_paths});
                 }
             }
+
+            Label {
+                id: loading
+                visible: true
+                text: qsTr("Loading...")
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge
+            }
+
 
             Repeater {
                 visible: false
@@ -132,7 +160,8 @@ Page {
                 onTriggered: {
                     if(banned_paths) {
                         starttimer.running = false;
-                        Functions.reloadSongList();
+                        myWorker.sendMessage({songs: fce.songs(), banned_paths: banned_paths});
+//                        Functions.reloadSongList();
                         /*songs = Functions.getSongs("Rammstein");
                         /*for(var j in banned_paths) {
                             var banned = banned_paths[j];
@@ -153,6 +182,7 @@ Page {
             }
 
             Component.onCompleted: {
+                myWorker.sendMessage({songs: fce.songs()});
                 DB.open().transaction(function(tx) {
 
                     //tx.executeSql("DROP TABLE IF EXISTS firstrun");

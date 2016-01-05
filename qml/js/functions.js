@@ -29,9 +29,15 @@ function reloadSongList(filter) {
 }
 
 function getSongs(filter) {
-    var songs = fce.songs();
-    songs = songs.split("\n");
-    songs.pop();
+    var songs;
+    if(parsed_songs) {
+        songs = parsed_songs;
+    } else {
+        songs = fce.songs();
+        songs = songs.split("\n");
+        songs.pop();
+        parsed_songs = songs;
+    }
     if(!filter) {
         return songs;
     }
@@ -44,7 +50,6 @@ function getSongs(filter) {
             r_songs.push(songs[i]);
         }
     }
-    console.log(r_songs);
     return r_songs;
 }
 
