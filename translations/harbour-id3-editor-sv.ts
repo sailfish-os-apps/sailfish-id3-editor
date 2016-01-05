@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/BanPath.qml" line="33"/>
         <source>If you add a path here, it will be ignored and won&apos;t search any mp3 files there.</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du lägger till en sökväg här, kommer den att undantas från sökning efter mp3-filer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/BanPath.qml" line="51"/>
