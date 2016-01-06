@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
 <context>
     <name>BanPath</name>
     <message>
@@ -65,7 +63,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="130"/>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Läser in...</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="117"/>

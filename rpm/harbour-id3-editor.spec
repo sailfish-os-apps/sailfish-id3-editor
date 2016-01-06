@@ -9,7 +9,7 @@ Name:       harbour-id3-editor
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    ID3 editor
 Version:    0.4
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/

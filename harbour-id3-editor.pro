@@ -33,6 +33,7 @@ TRANSLATIONS += translations/harbour-id3-editor-cs_CZ.ts
 TRANSLATIONS += translations/harbour-id3-editor-sv.ts
 TRANSLATIONS += translations/harbour-id3-editor-es.ts
 TRANSLATIONS += translations/harbour-id3-editor-de.ts
+TRANSLATIONS += translations/harbour-id3-editor-ru.ts
 
 DISTFILES += \
     qml/pages/MainPage.qml \

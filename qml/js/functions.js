@@ -66,22 +66,22 @@ function getSongInfo(path) {
         for (var i = 5; i < songinfo.length; i++) {
             var current = songinfo[i];
             //console.log(current);
-            if(current.indexOf("title") > -1) {
+            if(current.indexOf("title") == 0) {
                 ret.title = current.replace("title: ","");
             }
-            if(current.indexOf("album") > -1 && current.indexOf("artist") < 0) {
+            if(current.indexOf("album") == 0 && current.indexOf("artist") < 0) {
                 ret.album = current.replace("album: ","");
             }
-            if(current.indexOf("artist") > -1 && current.indexOf("album") < 0) {
+            if(current.indexOf("artist") == 0 && current.indexOf("album") < 0) {
                 ret.artist = current.replace("artist: ","");
             }
-            if(current.indexOf("album artist") > -1) {
+            if(current.indexOf("album artist") == 0) {
                 ret.album_artist = current.replace("album artist: ","");
             }
-            if(current.indexOf("release date") > -1 && current.indexOf("original") < 0) {
+            if(current.indexOf("release date") == 0 && current.indexOf("original") < 0) {
                 ret.release_date = current.replace("release date: ","");
             }
-            if(current.indexOf("track: ") > -1) {
+            if(current.indexOf("track: ") == 0) {
                 //var tr = current.replace("track: ","");
                 var tr = current.match(/^track: ([0-9]{1,3})\/?([0-9]{1,3})?.*$/);
                 if(typeof tr != "undefined" && tr) {
@@ -93,7 +93,7 @@ function getSongInfo(path) {
                     }
                 }
             }
-            if(current.indexOf("disc: ") > -1) {
+            if(current.indexOf("disc: ") == 0) {
                 var tr = current.replace("disc: ","");
                 if(tr.indexOf("/") > -1) {
                     tr = tr.split("/");
