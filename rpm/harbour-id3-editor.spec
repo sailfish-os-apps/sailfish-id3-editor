@@ -1,4 +1,5 @@
 Name:       harbour-id3-editor
+%define _unpackaged_files_terminate_build 0
 
 # >> macros
 # << macros
